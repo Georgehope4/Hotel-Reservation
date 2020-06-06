@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome Icon Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Assignment 5</title>
+  </head>
+
+  <body>
+    <h1>Hotel Booking</h1>
+    <div class="container">
+      <div id="controls">
+        <form>
+          <div class="row">
+            <input
+              class="form-control"
+              id="searchBar"
+              type="text"
+              list="hotels_list"
+              placeholder=" Search for Location..."
+            />
+            <datalist id="hotels_list"></datalist>
+            <button class="btn btn-primary">Search</button><br /><br />
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-md-3" id="checkIn">
+              Check In:<input
+                id="today2"
+                class="form-control checkIn"
+                type="date"
+              />
+            </div>
+            <div class="col-md-3" id="checkIn">
+              Check Out:<input
+                id="today1"
+                class="form-control checkOut"
+                type="date"
+              />
+            </div>
+            <div class="col-md-3" id="checkIn">
+              Order by <span class="fa fa-star checked"></span>:
+              <select id="rating" class="form-control">
+                <option value=" ">All</option>
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars </option>
+              </select>
+            </div>
+            <div class="col-md-2" id="checkIn">
+              Family Rooms:
+              <select class="form-control">
+                <option value="all" selected>All</option>
+                <option value="Single">Single Room</option>
+                <option value="Double">Double Room</option>
+                <option value="Double">Family Room</option>
+              </select>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-md-2" id="checkIn">
+              Guest Preview:
+              <select id="guest-rating" class="form-control">
+                <option value="all" selected>All</option>
+                <option value="Okay"
+                  ><span class="badge badge-success badge-pill"></span>0 – 2
+                  Okay</option
+                >
+                <option value="Fair">2 – 6 Fair</option>
+                <option value="Good">6 – 7 Good</option>
+                <option value="Very Good">7 – 8.5 Very Good</option>
+                <option value="Excellent">8.5 – 10 Excellent</option>
+              </select>
+            </div>
+
+            <div class="col-md-2" id="checkIn">
+              City:
+              <select id="locations" class="form-control">
+                <option value="all" selected>All</option>
+                <option value="Paris">Paris</option>
+                <option value="Toulouz">Toulouz</option>
+                <option value="Marseille">Marseille</option>
+              </select>
+            </div>
+            <div class="col-md-3" id="checkIn">
+              Sort By Recommendations:
+              <select id="recommendations" class="form-control">
+
+              </select>
+            </div>
+            <div class="col-md-4" id="checkIn">
+              Price:<span id="selected_price">1500 &euro; </span>
+              <input
+                id="price"
+                type="range"
+                min="720"
+                max="1500"
+                value="1500"
+                step="10"
+                class="slider"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <div id="hotels"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
