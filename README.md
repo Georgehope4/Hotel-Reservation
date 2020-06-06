@@ -1,4 +1,4 @@
-#Hotel Reservation
+# Hotel Reservation
 
 An html page, producing reporting views with custom filters by JavaScript
 
